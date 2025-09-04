@@ -1,1 +1,25 @@
-This is working
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alpine or Mesa today?</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <h1 id="word"></h1>
+
+  <script>
+    const words = ["Alpine", "Mesa"];
+
+    // Reference date
+    const referenceDate = new Date("2025-09-02T17:00:00Z");
+    const now = new Date();
+
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const daysPassed = Math.floor((now - referenceDate) / msPerDay);
+    const wordIndex = daysPassed % 2;
+
+    document.getElementById("word").textContent = words[wordIndex];
+  </script>
+</body>
+</html>
