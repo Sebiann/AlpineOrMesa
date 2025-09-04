@@ -10,6 +10,10 @@
 
   <script>
     const words = ["Alpine", "Mesa"];
+    const backgrounds = [
+      "url('alpine.jpg')",  // replace with your Alpine image
+      "url('mesa.jpg')"     // replace with your Mesa image
+    ];
 
     // Reference date
     const referenceDate = new Date("2025-09-02T17:00:00Z");
@@ -20,6 +24,7 @@
     const wordIndex = daysPassed % 2;
 
     document.getElementById("word").textContent = words[wordIndex];
+    document.body.style.backgroundImage = backgrounds[wordIndex];
   </script>
 </body>
 </html>
