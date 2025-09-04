@@ -1,17 +1,22 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Darumadrop One", sans-serif;
     color: #808080;
     background-size: cover;
     background-position: center;
     transition: background 1s ease;
 }
 h1 {
-    font-size: 7rem;
+    font-size: 10rem;
     font-weight: 600;
     text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+#timer {
+    font-size: 7rem;
+    text-shadow: 0 0 3px rgba(0,0,0,0.5);
 }

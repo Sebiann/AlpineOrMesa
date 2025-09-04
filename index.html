@@ -3,28 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Alpine or Mesa today?</title>
+  <meta name="description" content="Alpine or Mesa" />
+  <meta property="og:url" content="https://alpineormesa.oof.moe" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Alpine or Mesa today?" />
+  <meta property="og:description" content="Alpine or Mesa today?" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/32842507" />
   <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
 </head>
 <body>
   <h1 id="word"></h1>
-
-  <script>
-    const words = ["Alpine", "Mesa"];
-    const backgrounds = [
-      "url('alpine.jpg')",  // replace with your Alpine image
-      "url('mesa.jpg')"     // replace with your Mesa image
-    ];
-
-    // Reference date
-    const referenceDate = new Date("2025-09-02T17:00:00Z");
-    const now = new Date();
-
-    const msPerDay = 24 * 60 * 60 * 1000;
-    const daysPassed = Math.floor((now - referenceDate) / msPerDay);
-    const wordIndex = daysPassed % 2;
-
-    document.getElementById("word").textContent = words[wordIndex];
-    document.body.style.backgroundImage = backgrounds[wordIndex];
-  </script>
+  <div id="timer"></div>
+  <script src="index.js"></script>
 </body>
 </html>
