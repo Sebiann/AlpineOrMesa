@@ -5,7 +5,8 @@ const backgrounds = [
 ];
 
 // Reference date
-const referenceDate = new Date("2025-09-02T17:00:00Z");
+// Map was bumped ahead Sept 7, 25
+const referenceDate = new Date("2025-09-03T17:00:00Z");
 const now = new Date();
 
 const msPerDay = 24 * 60 * 60 * 1000;
