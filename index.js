@@ -1,7 +1,13 @@
 const words = ["Alpine", "Mesa"];
-const backgrounds = [
-    "url('alpine.jpg')",  // replace with your Alpine image
-    "url('mesa.jpg')"     // replace with your Mesa image
+const alpineImages = [
+    "url('public/alpine/1.jpg')",
+    "url('public/alpine/2.jpg')",
+    "url('public/alpine/3.jpg')",
+    "url('public/alpine/4.jpg')"
+];
+const mesaImages = [
+    "url('public/mesa/1.jpg')",
+    "url('public/mesa/2.jpg')"
 ];
 
 // Reference date
@@ -15,7 +21,15 @@ const daysPassed = Math.floor((now - referenceDate) / msPerDay);
 const wordIndex = daysPassed % 2;
 
 document.getElementById("word").textContent = words[wordIndex];
-document.body.style.backgroundImage = backgrounds[wordIndex];
+if (wordIndex === 0) {
+    // Alpine day
+    const randomAlpine = alpineImages[Math.floor(Math.random() * alpineImages.length)];
+    document.body.style.backgroundImage = randomAlpine;
+} else {
+    // Mesa day
+    const randomMesa = mesaImages[Math.floor(Math.random() * mesaImages.length)];
+    document.body.style.backgroundImage = randomMesa;
+}
 
 // --- Countdown Timer ---
 const timerElement = document.getElementById("timer");
@@ -28,9 +42,7 @@ function updateTimer() {
     if (now >= nextSwitch) {
         nextSwitch.setDate(nextSwitch.getDate() + 1);
     }
-
     const diffMs = nextSwitch - now;
-
     const hours = Math.floor(diffMs / (1000 * 60 * 60));
     const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
