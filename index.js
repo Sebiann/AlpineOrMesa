@@ -36,13 +36,16 @@ const timerElement = document.getElementById("timer");
 
 function updateTimer() {
     const now = new Date();
-
-    // Next switch is today 19:00 or tomorrow if passed
-    let nextSwitch = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 19, 0, 0);
-    if (now >= nextSwitch) {
-        nextSwitch.setDate(nextSwitch.getDate() + 1);
+    // Calculate next switch at 17:00 UTC
+    const utcYear = now.getUTCFullYear();
+    const utcMonth = now.getUTCMonth();
+    const utcDate = now.getUTCDate();
+    let nextSwitchUTC = new Date(Date.UTC(utcYear, utcMonth, utcDate, 17, 0, 0));
+    if (now >= nextSwitchUTC) {
+        // If past 17:00 UTC, set to next day 17:00 UTC
+        nextSwitchUTC = new Date(Date.UTC(utcYear, utcMonth, utcDate + 1, 17, 0, 0));
     }
-    const diffMs = nextSwitch - now;
+    const diffMs = nextSwitchUTC - now;
     const hours = Math.floor(diffMs / (1000 * 60 * 60));
     const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
