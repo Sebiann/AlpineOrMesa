@@ -1,13 +1,16 @@
-const words = ["Alpine", "Mesa"];
+const biomeThree = ["Alpine", "Mesa"];
+const shoreImages = [
+    "url('public/biomes/shore/1.jpg')"
+];
 const alpineImages = [
-    "url('public/alpine/1.jpg')",
-    "url('public/alpine/2.jpg')",
-    "url('public/alpine/3.jpg')",
-    "url('public/alpine/4.jpg')"
+    "url('public/biomes/alpine/1.jpg')",
+    "url('public/biomes/alpine/2.jpg')",
+    "url('public/biomes/alpine/3.jpg')",
+    "url('public/biomes/alpine/4.jpg')"
 ];
 const mesaImages = [
-    "url('public/mesa/1.jpg')",
-    "url('public/mesa/2.jpg')"
+    "url('public/biomes/mesa/1.jpg')",
+    "url('public/biomes/mesa/2.jpg')"
 ];
 
 // Reference date
@@ -20,15 +23,16 @@ const msPerDay = 24 * 60 * 60 * 1000;
 const daysPassed = Math.floor((now - referenceDate) / msPerDay);
 const wordIndex = daysPassed % 2;
 
-document.getElementById("word").textContent = words[wordIndex];
+// --- Set Biome and Background ---
+document.getElementById("word").textContent = biomeThree[wordIndex];
 if (wordIndex === 0) {
     // Alpine day
-    const randomAlpine = alpineImages[Math.floor(Math.random() * alpineImages.length)];
-    document.body.style.backgroundImage = randomAlpine;
-} else {
+    const randomAlpineImage = alpineImages[Math.floor(Math.random() * alpineImages.length)];
+    document.body.style.backgroundImage = randomAlpineImage;
+} else if (wordIndex === 1) {
     // Mesa day
-    const randomMesa = mesaImages[Math.floor(Math.random() * mesaImages.length)];
-    document.body.style.backgroundImage = randomMesa;
+    const randomMesaImage = mesaImages[Math.floor(Math.random() * mesaImages.length)];
+    document.body.style.backgroundImage = randomMesaImage;
 }
 
 // --- Countdown Timer ---
