@@ -2,21 +2,24 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
     font-family: "Darumadrop One", sans-serif;
-    color: #0027FF;
+    color: #001aaa;
     background-size: cover;
     background-position: center;
-    transition: background 1s ease;
 }
-h1 {
+section {
+    text-align: center;
+}
+#biomeThreeTitle {
     font-size: 10rem;
     font-weight: 600;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    text-shadow: 0 0 5px rgba(0,0,0,0.75);
 }
-#timer {
+#resetTimer {
     font-size: 7rem;
-    text-shadow: 0 0 3px rgba(0,0,0,0.5);
+    text-shadow: 0 0 3px rgba(0,0,0,0.75);
+    min-width: 4em;
+    text-align: center;
 }

@@ -13,10 +13,10 @@ const mesaImages = [
     "url('public/biomes/mesa/2.jpg')"
 ];
 
-// Reference date
-// Map was bumped ahead Sept 7, 25
-// And bumped back a day later
-const referenceDate = new Date("2025-09-02T17:00:00Z");
+// Reference date UTC
+const resetTimeHour = 17;
+const resetTimeMinute = 0;
+const referenceDate = new Date(Date.UTC(2025, 8, 2, resetTimeHour, resetTimeMinute, 0)); // Month is 0-indexed
 const now = new Date();
 
 const msPerDay = 24 * 60 * 60 * 1000;
@@ -24,7 +24,8 @@ const daysPassed = Math.floor((now - referenceDate) / msPerDay);
 const wordIndex = daysPassed % 2;
 
 // --- Set Biome and Background ---
-document.getElementById("word").textContent = biomeThree[wordIndex];
+document.getElementById("biomeThreeTitle").textContent = biomeThree[wordIndex];
+document.getElementById("pageTitle").textContent = "It is " + biomeThree[wordIndex] + "!";
 if (wordIndex === 0) {
     // Alpine day
     const randomAlpineImage = alpineImages[Math.floor(Math.random() * alpineImages.length)];
@@ -36,7 +37,7 @@ if (wordIndex === 0) {
 }
 
 // --- Countdown Timer ---
-const timerElement = document.getElementById("timer");
+const timerElement = document.getElementById("resetTimer");
 
 function updateTimer() {
     const now = new Date();
@@ -44,12 +45,17 @@ function updateTimer() {
     const utcYear = now.getUTCFullYear();
     const utcMonth = now.getUTCMonth();
     const utcDate = now.getUTCDate();
-    let nextSwitchUTC = new Date(Date.UTC(utcYear, utcMonth, utcDate, 17, 0, 0));
+    let nextSwitchUTC = new Date(Date.UTC(utcYear, utcMonth, utcDate, resetTimeHour, resetTimeMinute, 0));
     if (now >= nextSwitchUTC) {
         // If past 17:00 UTC, set to next day 17:00 UTC
-        nextSwitchUTC = new Date(Date.UTC(utcYear, utcMonth, utcDate + 1, 17, 0, 0));
+        nextSwitchUTC = new Date(Date.UTC(utcYear, utcMonth, utcDate + 1, resetTimeHour, resetTimeMinute, 0));
     }
     const diffMs = nextSwitchUTC - now;
+    if (diffMs <= 1000) {
+        // Timer hit zero, reload page
+        location.reload();
+        return;
+    }
     const hours = Math.floor(diffMs / (1000 * 60 * 60));
     const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
