@@ -10,8 +10,17 @@ const alpineImages = [
 ];
 const mesaImages = [
     "url('public/biomes/mesa/1.jpg')",
-    "url('public/biomes/mesa/2.jpg')"
+    "url('public/biomes/mesa/2.jpg')",
+    "url('public/biomes/mesa/3.jpg')",
+    "url('public/biomes/mesa/4.jpg')"
 ];
+const kilnImages = [
+    "url('public/biomes/kiln/1.jpg')"
+];
+const randomShoreImage = shoreImages[Math.floor(Math.random() * shoreImages.length)];
+const randomAlpineImage = alpineImages[Math.floor(Math.random() * alpineImages.length)];
+const randomMesaImage = mesaImages[Math.floor(Math.random() * mesaImages.length)];
+const randomKilnImage = kilnImages[Math.floor(Math.random() * kilnImages.length)];
 
 // Reference date UTC
 const resetTimeHour = 17;
@@ -28,11 +37,9 @@ document.getElementById("biomeThreeTitle").textContent = biomeThree[wordIndex];
 document.getElementById("pageTitle").textContent = "It is " + biomeThree[wordIndex] + "!";
 if (wordIndex === 0) {
     // Alpine day
-    const randomAlpineImage = alpineImages[Math.floor(Math.random() * alpineImages.length)];
     document.body.style.backgroundImage = randomAlpineImage;
 } else if (wordIndex === 1) {
     // Mesa day
-    const randomMesaImage = mesaImages[Math.floor(Math.random() * mesaImages.length)];
     document.body.style.backgroundImage = randomMesaImage;
 }
 
