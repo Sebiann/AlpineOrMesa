@@ -25,7 +25,7 @@ const randomKilnImage = kilnImages[Math.floor(Math.random() * kilnImages.length)
 // Reference date UTC
 const resetTimeHour = 17;
 const resetTimeMinute = 0;
-const referenceDate = new Date(Date.UTC(2025, 8, 2, resetTimeHour, resetTimeMinute, 0)); // Month is 0-indexed
+const referenceDate = new Date(Date.UTC(2025, 8, 3, resetTimeHour, resetTimeMinute, 0)); // Month is 0-indexed
 const now = new Date();
 
 const msPerDay = 24 * 60 * 60 * 1000;
