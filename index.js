@@ -12,7 +12,9 @@ const mesaImages = [
     "url('public/biomes/mesa/1.jpg')",
     "url('public/biomes/mesa/2.jpg')",
     "url('public/biomes/mesa/3.jpg')",
-    "url('public/biomes/mesa/4.jpg')"
+    "url('public/biomes/mesa/4.jpg')",
+    "url('public/biomes/mesa/5.jpg')",
+    "url('public/biomes/mesa/6.jpg')"
 ];
 const kilnImages = [
     "url('public/biomes/kiln/1.jpg')"
