@@ -13,8 +13,10 @@ const mesaImages = [
     "url('public/biomes/mesa/2.jpg')",
     "url('public/biomes/mesa/3.jpg')",
     "url('public/biomes/mesa/4.jpg')",
-    "url('public/biomes/mesa/5.jpg')",
-    "url('public/biomes/mesa/6.jpg')"
+    "url('public/biomes/mesa/5.jpg')"
+];
+const calderaImages = [
+    "url('public/biomes/kiln/1.jpg')"
 ];
 const kilnImages = [
     "url('public/biomes/kiln/1.jpg')"
@@ -22,6 +24,7 @@ const kilnImages = [
 const randomShoreImage = shoreImages[Math.floor(Math.random() * shoreImages.length)];
 const randomAlpineImage = alpineImages[Math.floor(Math.random() * alpineImages.length)];
 const randomMesaImage = mesaImages[Math.floor(Math.random() * mesaImages.length)];
+const randomCalderaImage = calderaImages[Math.floor(Math.random() * calderaImages.length)]
 const randomKilnImage = kilnImages[Math.floor(Math.random() * kilnImages.length)];
 
 // Reference date UTC
