@@ -1,4 +1,5 @@
-body {
+/* Index css styles */
+.indexBody {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +10,7 @@ body {
     background-size: cover;
     background-position: center;
 }
-section {
+.indexSection {
     text-align: center;
 }
 #biomeThreeTitle {
@@ -22,4 +23,117 @@ section {
     text-shadow: 0 0 3px rgba(0,0,0,0.75);
     min-width: 4em;
     text-align: center;
+}
+#galleryButton {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(223, 49, 49, 0.8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+#galleryButton:hover {
+    background-color: rgba(223, 49, 49, 1);
+}
+/* Gallery css styles */
+.topBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#biomeThreeTitleGallery {
+    font-size: 1rem;
+    padding-right: 20px;
+}
+#resetTimerGallery {
+    font-size: 1rem;
+}
+.galleryBody {
+    background-color: gray;
+}
+.gallerySection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+}
+.galleryNav {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #001aaa;
+    justify-content: space-around;
+    max-height: 250px;
+}
+.galleryContainer {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+    padding: 2rem;  
+    background-color: #001aaa;
+}
+.galleryImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(24, 117, 255, 0.349);
+    transition: transform 0.3s, box-shadow 0.3s;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(24, 117, 255, 0.549);
+    }
+}
+.bigImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: 0 8px 16px rgba(24, 117, 255, 0.749);
+    cursor: pointer;
+    background: rgba(0,0,0,0.85);
+    &:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* Move Buttons */
+.leftButton, .rightButton {
+    box-shadow: none;
+    z-index: 10000;
+    width: 70px;
+    height: 50px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.leftButton {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.rightButton {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
