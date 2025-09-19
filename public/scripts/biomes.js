@@ -17,7 +17,7 @@ export const shoreText = [
 
 export const tropicsImages = [
     "url('public/biomes/tropics/original-1.jpg')",
-    "url('public/biomes/tropics/original-2.png')",
+    "url('public/biomes/tropics/2.png')",
     "url('public/biomes/tropics/original-3.png')"
 ];
 export const tropicsText = [
@@ -63,8 +63,8 @@ export const calderaText = [
 
 export const kilnImages = [
     "url('public/biomes/kiln/1.jpg')",
-    "url('public/biomes/kiln/original-2.jpg')",
-    "url('public/biomes/kiln/original-3.jpg')"
+    "url('public/biomes/kiln/2.jpg')",
+    "url('public/biomes/kiln/3.jpg')"
 ];
 export const kilnText = [
     "#1 [INSERT TEXT HERE]",
