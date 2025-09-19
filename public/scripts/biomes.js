@@ -2,28 +2,28 @@ export const biomeThree = ["Alpine", "Mesa"];
 
 export const shoreImages = [
     "url('public/biomes/shore/1.png')",
-    "url('public/biomes/shore/original-2.jpg')",
-    "url('public/biomes/shore/original-3.jpg')",
+    "url('public/biomes/shore/2.jpg')",
+    "url('public/biomes/shore/3.jpg')",
     "url('public/biomes/shore/original-4.jpg')",
-    "url('public/biomes/shore/original-5.jpg')"
+    "url('public/biomes/shore/5.jpg')"
 ];
 export const shoreText = [
     "#1 Everyone died here",
-    "#2 [INSERT TEXT HERE]",
+    "#2 THE Canon-event",
     "#3 [INSERT TEXT HERE]",
     "#4 [INSERT TEXT HERE]",
     "#5 [INSERT TEXT HERE]"
 ];
 
 export const tropicsImages = [
-    "url('public/biomes/tropics/original-1.jpg')",
+    "url('public/biomes/tropics/1.jpg')",
     "url('public/biomes/tropics/2.png')",
-    "url('public/biomes/tropics/original-3.png')"
+    "url('public/biomes/tropics/3.png')"
 ];
 export const tropicsText = [
-    "#1 [INSERT TEXT HERE]",
-    "#2 [INSERT TEXT HERE]",
-    "#3 [INSERT TEXT HERE]"
+    "#1 Astronaut dead",
+    "#2 Suitcase",
+    "#3 BTS"
 ];
 
 export const alpineImages = [
@@ -33,10 +33,10 @@ export const alpineImages = [
     "url('public/biomes/alpine/4.jpg')"
 ];
 export const alpineText = [
-    "#1 [INSERT TEXT HERE]",
-    "#2 [INSERT TEXT HERE]",
-    "#3 [INSERT TEXT HERE]",
-    "#4 [INSERT TEXT HERE]"
+    "#1 Capybara",
+    "#2 Canon fail",
+    "#3 Spooky",
+    "#4 Don't slip"
 ];
 
 export const mesaImages = [
@@ -47,18 +47,18 @@ export const mesaImages = [
     "url('public/biomes/mesa/5.jpg')"
 ];
 export const mesaText = [
-    "#1 [INSERT TEXT HERE]",
-    "#2 [INSERT TEXT HERE]",
-    "#3 [INSERT TEXT HERE]",
-    "#4 [INSERT TEXT HERE]",
-    "#5 [INSERT TEXT HERE]"
+    "#1 falling, or not falling",
+    "#2 Run boy run",
+    "#3 hehehehehehe",
+    "#4 Smile and wave boys",
+    "#5 Death in mids of the balls"
 ];
 
 export const calderaImages = [
     "url('public/biomes/caldera/1.jpg')"
 ];
 export const calderaText = [
-    "#1 [INSERT TEXT HERE]"
+    "#1 Fly hacks"
 ];
 
 export const kilnImages = [
@@ -67,9 +67,9 @@ export const kilnImages = [
     "url('public/biomes/kiln/3.jpg')"
 ];
 export const kilnText = [
-    "#1 [INSERT TEXT HERE]",
-    "#2 [INSERT TEXT HERE]",
-    "#3 [INSERT TEXT HERE]"
+    "#1 Magma Boy",
+    "#2 More throw than faith",
+    "#3 Salute Soldier"
 ];
 
 // Reference date UTC
