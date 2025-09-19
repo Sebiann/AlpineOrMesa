@@ -133,6 +133,19 @@ rightButton.addEventListener("click", () => {
     updateNavButtons();
 });
 
+// Keyboard navigation for left/right arrow keys
+document.addEventListener("keydown", (e) => {
+    const bigImg = document.querySelector('.bigImage');
+    if (!bigImg) return;
+    if (e.key === "ArrowLeft") {
+        navigateGallery("left");
+        updateNavButtons();
+    } else if (e.key === "ArrowRight") {
+        navigateGallery("right");
+        updateNavButtons();
+    }
+});
+
 // Load initial biome images
 if (wordIndex === 0) {
     // Alpine day
