@@ -2,10 +2,10 @@ export const biomeThree = ["Alpine", "Mesa"];
 
 export const shoreImages = [
     "url('public/biomes/shore/1.png')",
-    "url('public/biomes/shore/2.jpg')",
-    "url('public/biomes/shore/3.jpg')",
-    "url('public/biomes/shore/original-4.jpg')",
-    "url('public/biomes/shore/5.jpg')"
+    "url('public/biomes/shore/original-2.jpg')", // Bad quality
+    "url('public/biomes/shore/original-3.jpg')",
+    "url('public/biomes/shore/original-4.jpg')", // Bad quality
+    "url('public/biomes/shore/original-5.jpg')"  // Bad quality
 ];
 export const shoreText = [
     "#1 Everyone died here",
@@ -16,9 +16,9 @@ export const shoreText = [
 ];
 
 export const tropicsImages = [
-    "url('public/biomes/tropics/1.jpg')",
+    "url('public/biomes/tropics/original-1.jpg')", // Bad quality
     "url('public/biomes/tropics/2.png')",
-    "url('public/biomes/tropics/3.png')"
+    "url('public/biomes/tropics/original-3.png')"  // Bad quality
 ];
 export const tropicsText = [
     "#1 Astronaut dead",
