@@ -28,6 +28,7 @@ export const tropicsText = [
 ];
 
 export const rootsImages = [
+    "url('public/biomes/roots/1.jpg')",
 ];
 export const rootsText = [
     "#1 Roots"

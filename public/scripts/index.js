@@ -1,42 +1,59 @@
 import { tropicsImages, rootsImages, alpineImages, mesaImages, wordIndex } from './biomes.js';
 
-const randomAlpineImage = alpineImages[Math.floor(Math.random() * alpineImages.length)];
-const randomMesaImage = mesaImages[Math.floor(Math.random() * mesaImages.length)];
-const randomTropicsImage = tropicsImages[Math.floor(Math.random() * tropicsImages.length)];
-const randomRootsImage = rootsImages[Math.floor(Math.random() * rootsImages.length)];
+function getRandomImage(imageArray) {
+    return imageArray[Math.floor(Math.random() * imageArray.length)];
+}
 
 var biome = 3;
 
-if (wordIndex === 0 && biome === 3) {
-    // Alpine day
-    document.body.style.backgroundImage = randomAlpineImage;
-} else if (wordIndex === 1 && biome === 3) {
-    // Mesa day
-    document.body.style.backgroundImage = randomMesaImage;
+function setBackground(img) {
+    if (!img) return;
+    if (typeof img === 'string' && img.trim().startsWith('url(')) {
+        document.body.style.backgroundImage = img;
+    } else {
+        document.body.style.backgroundImage = `url("${img}")`;
+    }
 }
 
-const toggleButton = document.querySelector("toggleButton");
+if (wordIndex === 0 && biome === 3) {
+    // Alpine day
+    setBackground(getRandomImage(alpineImages));
+} else if (wordIndex === 1 && biome === 3) {
+    // Mesa day
+    setBackground(getRandomImage(mesaImages));
+}
 
-toggleButton.addEventListener("click", () => {
+function toggleBiome() {
+    console.log("Toggling biome");
     if (biome === 3) {
         // Switch to biomeTwo
         biome = 2;
+        console.log("Switched to biomeTwo");
         if (wordIndex === 0) {
             // Tropics
-            document.body.style.backgroundImage = randomTropicsImage;
+            setBackground(getRandomImage(tropicsImages));
         } else if (wordIndex === 1) {
             // Roots
-            document.body.style.backgroundImage = randomRootsImage;
+            setBackground(getRandomImage(rootsImages));
         }
     } else {
         // Switch to biomeThree
         biome = 3;
+        console.log("Switched to biomeThree");
         if (wordIndex === 0) {
             // Alpine
-            document.body.style.backgroundImage = randomAlpineImage;
+            setBackground(getRandomImage(alpineImages));
         } else if (wordIndex === 1) {
             // Mesa
-            document.body.style.backgroundImage = randomMesaImage;
+            setBackground(getRandomImage(mesaImages));
         }
     }
-});
+}
+
+const toggleButton = document.querySelector("#toggleButton");
+
+// Manual toggle on button click
+toggleButton.addEventListener("click", toggleBiome);
+
+// Auto-toggle every 10 seconds
+setInterval(toggleBiome, 10000);
