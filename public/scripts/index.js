@@ -15,7 +15,7 @@ if (wordIndex === 0 && biome === 3) {
     document.body.style.backgroundImage = randomMesaImage;
 }
 
-const toggleButton = document.querySelector(".toggleButton");
+const toggleButton = document.querySelector("toggleButton");
 
 toggleButton.addEventListener("click", () => {
     if (biome === 3) {
