@@ -13,7 +13,7 @@
 .indexSection {
     text-align: center;
 }
-#biomeThreeTitle {
+#biomeTitle {
     font-size: 10rem;
     font-weight: 600;
     text-shadow: 0 0 5px rgba(0,0,0,0.75);
@@ -38,5 +38,21 @@
     text-decoration: none;
 }
 #galleryButton:hover {
+    background-color: rgba(223, 49, 49, 1);
+}
+#toggleButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(223, 49, 49, 0.8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+#toggleButton:hover {
     background-color: rgba(223, 49, 49, 1);
 }

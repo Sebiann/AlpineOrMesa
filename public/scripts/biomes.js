@@ -1,3 +1,4 @@
+export const biomeTwo = ["Tropics", "Roots"];
 export const biomeThree = ["Alpine", "Mesa"];
 
 export const shoreImages = [
@@ -24,6 +25,12 @@ export const tropicsText = [
     "#1 Astronaut dead",
     "#2 Suitcase",
     "#3 BTS"
+];
+
+export const rootsImages = [
+];
+export const rootsText = [
+    "#1 Roots"
 ];
 
 export const alpineImages = [

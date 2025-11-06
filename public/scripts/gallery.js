@@ -1,5 +1,5 @@
-import { shoreImages, tropicsImages, alpineImages, mesaImages, calderaImages, kilnImages, wordIndex } from './biomes.js';
-import { shoreText, tropicsText, alpineText, mesaText, calderaText, kilnText } from './biomes.js';
+import { shoreImages, tropicsImages, rootsImages, alpineImages, mesaImages, calderaImages, kilnImages, wordIndex } from './biomes.js';
+import { shoreText, tropicsText, rootsText, alpineText, mesaText, calderaText, kilnText } from './biomes.js';
 
 
 // --- Gallery ---
@@ -28,6 +28,8 @@ function replaceImages(biome) {
         images = kilnImages;
     } else if (biome === "tropics") {
         images = tropicsImages;
+    } else if (biome === "roots") {
+        images = rootsImages;
     }
 
     const galleryContainer = document.querySelector(".galleryContainer");
@@ -69,6 +71,7 @@ function showBigImageLabel(idx, biome) {
     else if (biome === "kiln") label.textContent = kilnText[idx];
     else if (biome === "shore") label.textContent = shoreText[idx];
     else if (biome === "tropics") label.textContent = tropicsText[idx];
+    else if (biome === "roots") label.textContent = rootsText[idx];
     document.body.appendChild(label);
 }
 
