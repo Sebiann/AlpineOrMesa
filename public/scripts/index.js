@@ -24,14 +24,12 @@ if (wordIndex === 0 && biome === 3) {
 }
 
 function toggleBiome() {
-    console.log("Toggling biome");
     if (biome === 3) {
         // Switch to biomeTwo
         biome = 2;
-        console.log("Switched to biomeTwo");
         if (wordIndex === 0) {
             // Tropics
-            setBackground(getRandomImage(tropicsImages));
+            setBackground(getRandomImage(rootsImages));
         } else if (wordIndex === 1) {
             // Roots
             setBackground(getRandomImage(rootsImages));
@@ -39,7 +37,6 @@ function toggleBiome() {
     } else {
         // Switch to biomeThree
         biome = 3;
-        console.log("Switched to biomeThree");
         if (wordIndex === 0) {
             // Alpine
             setBackground(getRandomImage(alpineImages));
