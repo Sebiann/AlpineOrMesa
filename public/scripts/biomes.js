@@ -29,9 +29,13 @@ export const tropicsText = [
 
 export const rootsImages = [
     "url('public/biomes/roots/1.jpg')",
+    "url('public/biomes/roots/2.jpg')",
+    "url('public/biomes/roots/3.jpg')"
 ];
 export const rootsText = [
-    "#1 Roots"
+    "#1 Roots",
+    "wait for it",
+    "YEEEET"
 ];
 
 export const alpineImages = [
