@@ -1,4 +1,4 @@
-import { tropicsImages, rootsImages, alpineImages, mesaImages, wordIndex } from './biomes.js';
+import { tropicsImages, rootsImages, alpineImages, mesaImages, index, biomeVariations } from './biomes.js';
 
 function getRandomImage(imageArray) {
     return imageArray[Math.floor(Math.random() * imageArray.length)];
@@ -15,10 +15,10 @@ function setBackground(img) {
     }
 }
 
-if (wordIndex === 0 && biome === 3) {
+if (biomeVariations[index].includes('alpine')) {
     // Alpine day
     setBackground(getRandomImage(alpineImages));
-} else if (wordIndex === 1 && biome === 3) {
+} else if (biomeVariations[index].includes('mesa')) {
     // Mesa day
     setBackground(getRandomImage(mesaImages));
 }
@@ -27,20 +27,20 @@ function toggleBiome() {
     if (biome === 3) {
         // Switch to biomeTwo
         biome = 2;
-        if (wordIndex === 0) {
+        if (biomeVariations[index].includes('tropics')) {
             // Tropics
-            setBackground(getRandomImage(rootsImages));
-        } else if (wordIndex === 1) {
+            setBackground(getRandomImage(tropicsImages));
+        } else if (biomeVariations[index].includes('roots')) {
             // Roots
             setBackground(getRandomImage(rootsImages));
         }
     } else {
         // Switch to biomeThree
         biome = 3;
-        if (wordIndex === 0) {
+        if (biomeVariations[index].includes('alpine')) {
             // Alpine
             setBackground(getRandomImage(alpineImages));
-        } else if (wordIndex === 1) {
+        } else if (biomeVariations[index].includes('mesa')) {
             // Mesa
             setBackground(getRandomImage(mesaImages));
         }

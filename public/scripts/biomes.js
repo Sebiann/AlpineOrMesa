@@ -1,5 +1,21 @@
 export const biomeTwo = ["Tropics", "Roots"];
 export const biomeThree = ["Alpine", "Mesa"];
+export const biomeVariations = [
+    ['tropics', 'mesa'],
+    ['roots', 'mesa'],
+    ['tropics', 'alpine'],
+    ['roots', 'mesa'],
+    ['tropics', 'alpine'],
+    ['roots', 'alpine'],
+    ['tropics', 'mesa'],
+    ['roots', 'alpine'],
+    ['tropics', 'alpine '],
+    ['roots', 'alpine'],
+    ['tropics', 'alpine'],
+    ['tropics', 'mesa'],
+    ['roots', 'alpine'],
+    ['tropics', 'alpine']
+];
 
 export const shoreImages = [
     "url('public/biomes/shore/1.png')",
@@ -87,12 +103,29 @@ export const kilnText = [
 // Reference date UTC
 const resetTimeHour = 17;
 const resetTimeMinute = 0;
-const referenceDate = new Date(Date.UTC(2025, 8, 3, resetTimeHour, resetTimeMinute, 0)); // Month is 0-indexed
-const now = new Date();
+const referenceDate = new Date(Date.UTC(2025, 10, 18, resetTimeHour, resetTimeMinute, 0)); // Month is 0-indexed
+
+function getNextResetTime() {
+    const now = new Date();
+    const reset = new Date(Date.UTC(
+        now.getUTCFullYear(),
+        now.getUTCMonth(),
+        now.getUTCDate(),
+        resetTimeHour,
+        resetTimeMinute,
+        0,
+        0
+    ));
+    if (reset.getTime() < now.getTime()) {
+        reset.setUTCDate(reset.getUTCDate() + 1);
+    }
+    return reset;
+}
+const resetTime = getNextResetTime();
 
 const msPerDay = 24 * 60 * 60 * 1000;
-const daysPassed = Math.floor((now - referenceDate) / msPerDay);
-export const wordIndex = daysPassed % 2;
+const daysPassed = Math.floor((resetTime - referenceDate) / msPerDay);
+export const index = ((daysPassed % biomeVariations.length) + biomeVariations.length) % biomeVariations.length;
 
 // --- Countdown Timer ---
 const timerElement = document.getElementById("resetTimer");

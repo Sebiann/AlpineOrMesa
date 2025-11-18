@@ -1,4 +1,4 @@
-import { shoreImages, tropicsImages, rootsImages, alpineImages, mesaImages, calderaImages, kilnImages, wordIndex } from './biomes.js';
+import { shoreImages, tropicsImages, rootsImages, alpineImages, mesaImages, calderaImages, kilnImages, biomeVariations, index } from './biomes.js';
 import { shoreText, tropicsText, rootsText, alpineText, mesaText, calderaText, kilnText } from './biomes.js';
 
 
@@ -150,11 +150,11 @@ document.addEventListener("keydown", (e) => {
 });
 
 // Load initial biome images
-if (wordIndex === 0) {
+if (biomeVariations[index].includes('alpine')) {
     // Alpine day
     currentBiome = "alpine";
     replaceImages("alpine");
-} else if (wordIndex === 1) {
+} else if (biomeVariations[index].includes('mesa')) {
     // Mesa day
     currentBiome = "mesa";
     replaceImages("mesa");
