@@ -9,7 +9,7 @@ export const biomeVariations = [
     ['roots', 'alpine'],
     ['tropics', 'mesa'],
     ['roots', 'alpine'],
-    ['tropics', 'alpine '],
+    ['tropics', 'alpine'],
     ['roots', 'alpine'],
     ['tropics', 'alpine'],
     ['tropics', 'mesa'],
