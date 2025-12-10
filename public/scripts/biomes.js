@@ -113,10 +113,9 @@ function getNextResetTime() {
         now.getUTCDate(),
         resetTimeHour,
         resetTimeMinute,
-        0,
         0
     ));
-    if (reset.getTime() < now.getTime()) {
+    if (now.getTime() < reset.getTime()) {
         reset.setUTCDate(reset.getUTCDate() + 1);
     }
     return reset;
