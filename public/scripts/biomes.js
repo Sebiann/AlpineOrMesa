@@ -1,21 +1,10 @@
 export const biomeTwo = ["Tropics", "Roots"];
 export const biomeThree = ["Alpine", "Mesa"];
 export const biomeVariations = [
-    ['tropics', 'mesa'],	// Level_5
-    ['tropics', 'alpine'],  // Level_6
-    ['roots', 'alpine'],	// Level_7
-    ['roots', 'mesa'],	    // Level_8
-    ['tropics', 'mesa'],	// Level_9
-    ['roots', 'alpine'],	// Level_10
-    ['roots', 'mesa'],	     // Level_11
-    ['tropics', 'alpine'],  // Level_12
-    ['tropics', 'mesa'],	// Level_13
-    ['roots', 'alpine'],	// Level_14
-    ['roots', 'mesa'],	     // Level_0
-    ['roots', 'alpine'],	// Level_1
-    ['tropics', 'mesa'],	// Level_2
-    ['roots', 'mesa'],	    // Level_3
-    ['roots', 'alpine'] 	// Level_4
+		['roots', 'mesa'],	// Level_3
+		['tropics', 'mesa'],	// Level_0
+		['tropics', 'alpine'],	// Level_1
+		['roots', 'alpine'] 	// Level_2
 ];
 export const shoreImages = [
     "url('public/biomes/shore/1.png')",
@@ -103,7 +92,7 @@ export const kilnText = [
 // Reference date UTC
 const resetTimeHour = 17;
 const resetTimeMinute = 0;
-const referenceDate = new Date(Date.UTC(2025, 11, 1, resetTimeHour, resetTimeMinute, 0)); // Month is 0-indexed
+const referenceDate = new Date(Date.UTC(2025, 11, 10, resetTimeHour, resetTimeMinute, 0)); // Month is 0-indexed
 
 function getNextResetTime() {
     const now = new Date();
