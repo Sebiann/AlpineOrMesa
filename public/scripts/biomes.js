@@ -1,10 +1,27 @@
 export const biomeTwo = ["Tropics", "Roots"];
 export const biomeThree = ["Alpine", "Mesa"];
 export const biomeVariations = [
-		['roots', 'mesa'],	// Level_3
-		['tropics', 'mesa'],	// Level_0
-		['tropics', 'alpine'],	// Level_1
-		['roots', 'alpine'] 	// Level_2
+		['tropics', 'mesa'],		// Level_17
+		['roots', 'mesa'],			// Level_18
+		['roots', 'alpine'],		// Level_19
+		['tropics', 'alpine'],		// Level_20
+		['tropics', 'mesa'],		// Level_0
+		['tropics', 'alpine'],		// Level_1
+		['roots', 'mesa'],			// Level_2
+		['tropics', 'mesa'],		// Level_3
+		['roots', 'alpine'],		// Level_4
+		['tropics', 'mesa'],		// Level_5
+		['roots', 'alpine'],		// Level_6
+		['roots', 'mesa'],			// Level_7
+		['tropics', 'mesa'],		// Level_8
+		['tropics', 'alpine'],		// Level_9
+		['roots', 'mesa'],			// Level_10
+		['tropics', 'mesa'],		// Level_11
+		['roots', 'alpine'],		// Level_12
+		['tropics', 'alpine'],		// Level_13
+		['tropics', 'mesa'],		// Level_14
+		['roots', 'alpine'],		// Level_15
+		['tropics', 'alpine'] 		// Level_16
 ];
 export const shoreImages = [
     "url('public/biomes/shore/1.png')",
@@ -92,7 +109,7 @@ export const kilnText = [
 // Reference date UTC
 const resetTimeHour = 17;
 const resetTimeMinute = 0;
-const referenceDate = new Date(Date.UTC(2025, 11, 10, resetTimeHour, resetTimeMinute, 0)); // Month is 0-indexed
+const referenceDate = new Date(Date.UTC(2025, 11, 16, resetTimeHour, resetTimeMinute, 0)); // Month is 0-indexed
 
 function getNextResetTime() {
     const now = new Date();
